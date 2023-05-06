@@ -6,8 +6,16 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script>
-        let a = new Date();
-        let time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+        a = new Date();
+        date = a.toLocaleDateString(undefined, options);
+        time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        document.getElementById('time').innerHTML = time + "<br>" + date;
+    }, 1000);
     </script>
   </head>
   <body>
@@ -50,13 +58,14 @@
       <div class="container my-4">
         <div class="jumbotron">
             <h1 class="display-4">Current Time is: <span id="time">
-                
+                console.log(a);
             </span></h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <p class="lead">The time shown above is in the format of hh:mm:ss and it is updating own its own.
+            </p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p>We are here to show you the time of different countries.</p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times</a>
             </p>
           </div>
       </div>
