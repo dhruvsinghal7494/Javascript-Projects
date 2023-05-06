@@ -13,7 +13,12 @@
         setInterval(() => {
         a = new Date();
         date = a.toLocaleDateString(undefined, options);
+        if(a.getSeconds < 10){
+            time = a.getHours() + ":" + a.getMinutes() + ":0" + a.getSeconds();
+        }
+        else {
         time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        }
         document.getElementById('time').innerHTML = time + "<br>" + date;
     }, 1000);
     </script>
