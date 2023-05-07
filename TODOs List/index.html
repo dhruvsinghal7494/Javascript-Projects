@@ -15,8 +15,8 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
     <title>TODOs List</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -79,21 +79,36 @@
       </div>
     </nav>
     <form>
-        <div class="form-group">
-          <label for="text">Title</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">Write the work you want to add to your list.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Description</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <!-- <div class="form-group form-check">
+      <div class="form-group">
+        <label for="text">Title</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Type the work to do."
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >Write the work you want to add to your list.</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="More Info"
+        />
+      </div>
+      <!-- <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div> -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      <button type="submit" class="btn btn-primary" style="margin: 9px 110px">
+        Submit
+      </button>
+    </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
